@@ -10,13 +10,24 @@
 </head>
 
 <body>
-    <div class="container spinner-3">
+    <div class="container">
         <h1>Welcome, to my website!</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi cupiditate vero inventore asperiores nobis unde earum
             dolorum obcaecati! Ipsa reiciendis consequatur assumenda quasi delectus consectetur molestiae laboriosam, a voluptatum?
             Laudantium natus, laborum ad hic officiis tenetur neque exercitationem eveniet id minima ullam non molestiae
             recusandae ut quidem saepe fugiat. Nam?</p>
     </div>
+
+    <script>
+        document.querySelector(".container p").style.display = 'none';
+        document.querySelector(".container").classList.add('spinner-1');
+
+        //mimic a server request
+        setTimeout(() => {
+            document.querySelector(".container p").style.display = 'block';
+            document.querySelector(".container").classList.remove('spinner-1');
+        }, 4000)
+    </script>
 </body>
 
 </html>
